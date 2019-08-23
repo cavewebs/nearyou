@@ -1,5 +1,6 @@
 .map-canvas {
-  position: absolute;
+  padding-top: 100px;
+  position: relative;
 
   height: 100%;
   width: 100%;
@@ -12,4 +13,17 @@
 
 .show-map {
   opacity: 1;
+}
+.map-title{
+  z-index: 1000;
+  display: block;
+  position: absolute;
+}
+
+h2 {
+  color: var(--ion-color-secondary);
+  font-size: 14px;
+  b{
+    float: right;
+  }
 }

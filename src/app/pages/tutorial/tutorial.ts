@@ -23,8 +23,8 @@ export class TutorialPage {
 
   startApp() {
     this.router
-      .navigateByUrl('/app/tabs/schedule')
-      .then(() => this.storage.set('ion_did_tutorial', true));
+      .navigateByUrl('/signup')
+      .then(() => this.storage.set('seen_intro', true));
   }
 
   onSlideChangeStart(event) {
@@ -34,9 +34,9 @@ export class TutorialPage {
   }
 
   ionViewWillEnter() {
-    this.storage.get('ion_did_tutorial').then(res => {
+    this.storage.get('seen_intro').then(res => {
       if (res === true) {
-        this.router.navigateByUrl('/app/tabs/schedule');
+        this.router.navigateByUrl('/signup');
       }
     });
 
